@@ -22,38 +22,37 @@
 
 # Documentation de Dev
 
-- Initialisation du projet
-   * npmx react-native@latest init mel_lab
-- Initialisation de Git
-   * Création du repo github
-   * $ git init
-   * $ git add .
-   * $ git commit -m "Project's init"
-   * $ git branch -M main
-   * $ git remote add origin https://github.com/MelYuki/mel_lab.git
-   * $ git push -u origin main
-- Créa dossier ./src/ (<i>Dans ce dossier</i>):
-   * Créa des dossiers
-      1) screens/
-         * home/
-            * home.jsx
-            * login.jsx
-            * register.jsx
-         * nav/
-            * events-list.jsx
-            * events-details.jsx
-            * events-add.jsx
-      2) components/
-         * home/
-            * login-component.jsx
-            * register-component.jsx
-      3) services
-      4) styles
-         * global.style.js
-      5) utilities
-- Installation de dépendances:
-   * npm install @react-navigation/native
-   * npm install @react-navigation/stack
-   * npm install react-native-gesture-handler
-   * npm install react-native-screens react-native-safe-area-context
-   * npm install @react-navigation/material-bottom-tabs react-native-paper react-native-vector-icons
+## Initialisation du projet
+   - npmx react-native@latest init mel_lab
+## Initialisation de Git
+   - Création du repo github
+   - $ git init
+   - $ git add .
+   - $ git commit -m "Project's init"
+   - $ git branch -M main
+   - $ git remote add origin https://github.com/MelYuki/mel_lab.git
+   - $ git push -u origin main
+## Créa du dossier ./src/ (<i>Dans ce dossier</i>) :
+   - screens/
+      * home/
+         * home.jsx
+         * login.jsx
+         * register.jsx
+      * nav/
+         * events-list.jsx
+         * events-details.jsx
+         * events-add.jsx
+   - components/
+      * home/
+         * login-component.jsx
+         * register-component.jsx
+   - services
+   - styles
+      * global.style.js
+   - utilities
+## Installation de dépendances :
+   - npm install @react-navigation/native
+   - npm install @react-navigation/stack
+   - npm install react-native-gesture-handler
+   - npm install react-native-screens react-native-safe-area-context
+   - npm install @react-navigation/material-bottom-tabs react-native-paper react-native-vector-icons

@@ -23,7 +23,7 @@
 # Documentation de Dev
 
 ## Initialisation du projet
-   - npmx react-native@latest init mel_lab
+   - npx react-native@latest init mel_lab
 ## Initialisation de Git
    - Création du repo github
    - $ git init
@@ -56,3 +56,5 @@
    - npm install react-native-gesture-handler
    - npm install react-native-screens react-native-safe-area-context
    - npm install @react-navigation/material-bottom-tabs react-native-paper react-native-vector-icons
+## Run le projet :
+   - npx react-native start

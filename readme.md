@@ -1,5 +1,5 @@
-# LABORATOIRE (du 05 Juin au 19 Juin 2023)
-## Demande du client :
+# LABORATOIRE (du 05 au 19 Juin 2023)
+## Demandes du client :
 - Coder une app, "Gestionnaire d'évènements"
 - Création de compte - login
 - Options d'évènements:
@@ -24,7 +24,7 @@
 
 - Initialisation du projet
    * npmx react-native@latest init mel_lab
-- Git
+- Initialisation de Git
    * Création du repo github
    * $ git init
    * $ git add .
@@ -32,3 +32,28 @@
    * $ git branch -M main
    * $ git remote add origin https://github.com/MelYuki/mel_lab.git
    * $ git push -u origin main
+- Créa dossier ./src/ (<i>Dans ce dossier</i>):
+   * Créa des dossiers
+      1) screens/
+         * home/
+            * home.jsx
+            * login.jsx
+            * register.jsx
+         * nav/
+            * events-list.jsx
+            * events-details.jsx
+            * events-add.jsx
+      2) components/
+         * home/
+            * login-component.jsx
+            * register-component.jsx
+      3) services
+      4) styles
+         * global.style.js
+      5) utilities
+- Installation de dépendances:
+   * npm install @react-navigation/native
+   * npm install @react-navigation/stack
+   * npm install react-native-gesture-handler
+   * npm install react-native-screens react-native-safe-area-context
+   * npm install @react-navigation/material-bottom-tabs react-native-paper react-native-vector-icons

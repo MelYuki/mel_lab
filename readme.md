@@ -47,7 +47,7 @@
          * login-component.jsx
          * register-component.jsx
    - services
-   - styles
+   - styles/
       * global.style.js
    - utilities
 ## Installation de dépendances :

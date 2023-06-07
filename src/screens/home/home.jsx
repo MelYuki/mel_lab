@@ -1,18 +1,17 @@
-import { View, Text } from 'react-native';
-import globalStyle from '../../styles/global.style';
-import SignUp from '../../components/home/login-component';
+import { Text, View } from "react-native";
+import globalStyle from "../../styles/global.style";
 
-const Home = ({navigation}) => {
+const Home = ({route}) => {
+
+    const { credentials } = route.params
 
     return (
         <View style={globalStyle.screen}>
             <Text style={globalStyle.title}>
-                Welcome in Gest-Events
+                Home Page
             </Text>
-
-            <View>
-                <SignUp onCred={(username, password) => navigation.navigate("Login", username, password)}/>
-            </View>
+            <Text> Welcome {credentials.username}</Text>
+            <Text> Your password is : {credentials.password}</Text>
         </View>
     )
 }

@@ -34,18 +34,18 @@
    - $ git push -u origin main
 ## Créa du dossier ./src/ (<i>Dans ce dossier</i>) :
    - screens/
+      * login/
+         * login.jsx
+         * signUp.jsx
       * home/
          * home.jsx
-         * login.jsx
-         * register.jsx
-      * nav/
          * events-list.jsx
          * events-details.jsx
          * events-add.jsx
    - components/
-      * home/
+      * login/
          * login-component.jsx
-         * register-component.jsx
+         * signUp-component.jsx
    - services
    - styles/
       * global.style.js

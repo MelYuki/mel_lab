@@ -1,0 +1,20 @@
+import { View, Text } from 'react-native';
+import globalStyle from '../../styles/global.style';
+import SignIn from '../../components/login/login-component';
+
+const Login = ({navigation}) => {
+
+    return (
+        <View style={globalStyle.screen}>
+            <Text style={globalStyle.title}>
+                Welcome in Gest-Events
+            </Text>
+
+            <View>
+                <SignIn onCred={(credentials) => navigation.navigate("Home", {credentials})}/>
+            </View>
+        </View>
+    )
+}
+
+export default Login

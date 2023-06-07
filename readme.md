@@ -42,9 +42,10 @@
          * events-list.jsx
          * events-details.jsx
          * events-add.jsx
+         * events-shared.jsx
    - components/
       * login/
-         * login-component.jsx
+         * signIn-component.jsx
          * signUp-component.jsx
    - services
    - styles/

@@ -1,6 +1,7 @@
 import { View, Text } from 'react-native';
 import globalStyle from '../../styles/global.style';
-import SignIn from '../../components/login/login-component';
+import SignIn from '../../components/login/signIn-component';
+import SignUp from '../../components/login/signUp-component';
 
 const Login = ({navigation}) => {
 
@@ -12,6 +13,10 @@ const Login = ({navigation}) => {
 
             <View>
                 <SignIn onCred={(credentials) => navigation.navigate("Home", {credentials})}/>
+            </View>
+
+            <View>
+                <SignUp onReach={() => navigation.navigate("SignUp")}/>
             </View>
         </View>
     )

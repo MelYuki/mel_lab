@@ -10,7 +10,7 @@ const signUp = ({onReach}) => {
     return (
         <View style={globalStyle.login}>
             <Text style={globalStyle.subTitle}>
-                Get registred?
+                Get registered?
             </Text>
             <Button
                 title="SignUp"

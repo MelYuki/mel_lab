@@ -8,7 +8,7 @@ const SignUp = ({onSend}) => {
     const [ infos, setInfos ] = useState({
         firstname: "",
         lastname: "",
-        phoneNumber: 0,
+        phoneNumber: null,
         email: "",
         username: "",
         password: "" 
@@ -40,8 +40,8 @@ const SignUp = ({onSend}) => {
                     // onChangeText={}
                 />
                 <TextInput
-                    placeholder="Phone_number"
-                    inputMode="text"
+                    placeholder="Phone number"
+                    inputMode="tel"
                     value={infos.phoneNumber}
                     // onChangeText={}
                 />

@@ -23,7 +23,7 @@
 # Documentation de Dev
 
 ## Initialisation du projet
-   - npx react-native@latest init mel_lab
+   - npx react-native@latest init mel_lab_front
 ## Initialisation de Git
    - Création du repo github
    - $ git init
@@ -51,7 +51,7 @@
    - styles/
       * global.style.js
    - utilities
-## Installation de dépendances :
+## Installation des dépendances :
    - npm install @react-navigation/native
    - npm install @react-navigation/stack
    - npm install react-native-gesture-handler

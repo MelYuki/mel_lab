@@ -16,7 +16,7 @@ const Login = ({navigation}) => {
             </View>
 
             <View>
-                <SignUp onReach={() => navigation.navigate("SignUp")}/>
+                <SignUp onReach={() => navigation.navigate("Registering")}/>
             </View>
         </View>
     )

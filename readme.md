@@ -36,7 +36,7 @@
    - screens/
       * login/
          * login.jsx
-         * signUp.jsx
+         * registering.jsx
       * home/
          * home.jsx
          * events-list.jsx
@@ -47,6 +47,8 @@
       * login/
          * signIn-component.jsx
          * signUp-component.jsx
+      * registering/
+         * form-component.jsx
    - services
    - styles/
       * global.style.js

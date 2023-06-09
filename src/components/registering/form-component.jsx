@@ -1,9 +1,9 @@
-import { Text, View, TextInput, Button } from "react-native";
+import { View, TextInput, Button } from "react-native";
 import globalStyle from "../../styles/global.style";
 import { useState } from "react";
 // import PhoneInput from "react-native-phone-input"
 
-const SignUp = ({onSend}) => {
+const Form = ({onSend}) => {
 
     const [ infos, setInfos ] = useState({
         firstname: "",
@@ -22,10 +22,6 @@ const SignUp = ({onSend}) => {
 
     return (
         <View style={globalStyle.screen}>
-            <Text style={globalStyle.title}>
-            {`Registering
-            Formular :`}
-            </Text>
             <View style={globalStyle.login}>
                 <TextInput
                     placeholder="Firstname"
@@ -72,4 +68,4 @@ const SignUp = ({onSend}) => {
     )
 }
 
-export default SignUp
+export default Form

@@ -10,11 +10,11 @@ const Home = ({route}) => {
             <Text style={globalStyle.title}>
                 Home Page
             </Text>
-            <View>
+            {/* <View>
                 <Text> Return of Login Inputs </Text>
                 <Text> Welcome {credentials.username}</Text>
                 <Text> Your password is : {credentials.password}</Text>
-            </View>
+            </View> */}
             <View>
                 <Text>Return of Registering Inputs</Text>
                 <Text>{infos.firstname}</Text>

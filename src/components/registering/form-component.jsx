@@ -14,15 +14,13 @@ const Form = ({onSend}) => {
         password: "" 
     })
 
-    const handleChangeForm = (input) => {
-
-        const { name, value } = input.target
+    const handleChangeForm = (name, value) => {
+        // console.log(name, value)
         setInfos({
             ...infos,
             [name]: value
         })
-        console.log(input)
-        console.log(infos)
+        // console.log(infos)
     }
 
     const handleSubmit = () => {
@@ -36,49 +34,44 @@ const Form = ({onSend}) => {
                     style={globalStyle.input}
                     placeholder="Firstname"
                     inputMode="text"
-                    name="firstname"
                     value={infos.firstname}
-                    onChangeText={handleChangeForm}
+                    onChangeText={(value) => handleChangeForm("firstname", value)}
                 />
                 <TextInput
                     style={globalStyle.input}
                     placeholder="Lastname"
                     inputMode="text"
-                    name="lastname"
                     value={infos.lastname}
-                    onChangeText={handleChangeForm}
+                    onChangeText={(value) => handleChangeForm("lastname", value)}
                 />
                 <TextInput
                     style={globalStyle.input}
                     placeholder="Phone number"
                     inputMode="tel"
-                    name="phoneNumber"
                     value={infos.phoneNumber}
-                    onChangeText={handleChangeForm}
+                    onChangeText={(value) => handleChangeForm("phoneNumber", value)}
                 />
                 <TextInput
                     style={globalStyle.input}
                     placeholder="Email"
                     inputMode="email"
-                    name="email"
                     value={infos.email}
-                    onChangeText={handleChangeForm}
+                    onChangeText={(value) => handleChangeForm("email", value)}
                 />
                 <TextInput
                     style={globalStyle.input}
                     placeholder="Username"
                     inputMode="text"
-                    name="username"
                     value={infos.username}
-                    onChangeText={handleChangeForm}
+                    onChangeText={(value) => handleChangeForm("username", value)}
                 />
                 <TextInput
                     style={globalStyle.input}
                     placeholder="Password"
+                    secureTextEntry={true}
                     inputMode="text"
-                    name="password"
                     value={infos.password}
-                    onChangeText={handleChangeForm}
+                    onChangeText={(value) => handleChangeForm("password", value)}
                 />
                 <Button
                     title="send"

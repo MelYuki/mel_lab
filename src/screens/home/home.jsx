@@ -3,7 +3,7 @@ import globalStyle from "../../styles/global.style";
 
 const Home = ({route}) => {
 
-    const { credentials } = route.params
+    const { credentials, infos } = route.params
 
     return (
         <View style={globalStyle.screen}>
@@ -17,6 +17,12 @@ const Home = ({route}) => {
             </View>
             <View>
                 <Text>Return of Registering Inputs</Text>
+                <Text>{infos.firstname}</Text>
+                <Text>{infos.lastname}</Text>
+                <Text>{infos.phoneNumber}</Text>
+                <Text>{infos.email}</Text>
+                <Text>{infos.username}</Text>
+                <Text>{infos.password}</Text>
             </View>
         </View>
     )

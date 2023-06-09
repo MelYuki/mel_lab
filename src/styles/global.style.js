@@ -25,6 +25,11 @@ const globalStyle = StyleSheet.create({
     paddingTop: 50,
     paddingBottom: 50,
     marginTop: 20
+  },
+  input: {
+    height: 40,
+    margin: 12,
+    padding: 10,
   }
 })
 

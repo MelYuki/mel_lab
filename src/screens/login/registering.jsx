@@ -11,7 +11,7 @@ const Registering = ({navigation}) => {
             Formular :`}
             </Text>
 
-            <Form onSend={() => navigation.navigate("Login")} />
+            <Form onSend={(infos) => navigation.navigate("Home", {infos})} />
         </View>
     )
 }

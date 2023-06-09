@@ -30,7 +30,7 @@
    - $ git add .
    - $ git commit -m "Project's init"
    - $ git branch -M main
-   - $ git remote add origin https://github.com/MelYuki/mel_lab.git
+   - $ git remote add origin https://github.com/MelYuki/mel_lab_front.git
    - $ git push -u origin main
 ## Créa du dossier ./src/ (<i>Dans ce dossier</i>) :
    - screens/

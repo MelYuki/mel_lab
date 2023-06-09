@@ -22,9 +22,9 @@
 
 # Documentation de Dev
 
-## Initialisation du projet
+## Initialisation du projet :
    - npx react-native@latest init mel_lab_front
-## Initialisation de Git
+## Initialisation de Git :
    - Création du repo github
    - $ git init
    - $ git add .

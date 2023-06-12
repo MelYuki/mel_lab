@@ -2,6 +2,7 @@ import { View, TextInput, Button } from "react-native";
 import globalStyle from "../../styles/global.style";
 import { useState } from "react";
 // import PhoneInput from "react-native-phone-input"
+import { RegisteringService } from "../../services/register-service";
 
 const Form = ({onSend}) => {
 
@@ -21,7 +22,7 @@ const Form = ({onSend}) => {
     }
 
     const handleSubmit = () => {
-        onSend(infos)
+        RegisteringService({infos})
     }
 
     return (

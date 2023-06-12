@@ -10,7 +10,7 @@ const Home = ({route}) => {
             <Text style={globalStyle.title}>
                 Home Page
             </Text>
-            { credentials ? 
+            {/* { credentials ? 
                 (<View>
                     <Text> Return of Login Inputs </Text>
                     <Text> Welcome {credentials.username}</Text>
@@ -26,7 +26,7 @@ const Home = ({route}) => {
                     <Text>{infos.username}</Text>
                     <Text>{infos.password}</Text>
                 </View>)
-            }
+            } */}
         </View>
     )
 }

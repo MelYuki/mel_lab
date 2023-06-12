@@ -49,7 +49,8 @@
          * signUp-component.jsx
       * registering/
          * form-component.jsx
-   - services
+   - services/
+      * register-service.jsx
    - styles/
       * global.style.js
    - utilities
@@ -59,5 +60,6 @@
    - npm install react-native-gesture-handler
    - npm install react-native-screens react-native-safe-area-context
    - npm install @react-navigation/material-bottom-tabs react-native-paper react-native-vector-icons
+   - npm install axios
 ## Run le projet :
    - npx react-native start

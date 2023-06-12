@@ -6,9 +6,6 @@ import { useState } from "react";
 const Form = ({onSend}) => {
 
     const [ infos, setInfos ] = useState({
-        firstname: "",
-        lastname: "",
-        phoneNumber: null,
         email: "",
         username: "",
         password: "" 
@@ -30,27 +27,6 @@ const Form = ({onSend}) => {
     return (
         <View style={globalStyle.screen}>
             <View style={globalStyle.login}>
-                <TextInput
-                    style={globalStyle.input}
-                    placeholder="Firstname"
-                    inputMode="text"
-                    value={infos.firstname}
-                    onChangeText={(value) => handleChangeForm("firstname", value)}
-                />
-                <TextInput
-                    style={globalStyle.input}
-                    placeholder="Lastname"
-                    inputMode="text"
-                    value={infos.lastname}
-                    onChangeText={(value) => handleChangeForm("lastname", value)}
-                />
-                <TextInput
-                    style={globalStyle.input}
-                    placeholder="Phone number"
-                    inputMode="tel"
-                    value={infos.phoneNumber}
-                    onChangeText={(value) => handleChangeForm("phoneNumber", value)}
-                />
                 <TextInput
                     style={globalStyle.input}
                     placeholder="Email"

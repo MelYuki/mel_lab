@@ -10,11 +10,10 @@ const Home = ({route}) => {
             <Text style={globalStyle.title}>
                 Home Page
             </Text>
-            {/* { credentials ? 
+            { credentials ? 
                 (<View>
-                    <Text> Return of Login Inputs </Text>
-                    <Text> Welcome {credentials.username}</Text>
-                    <Text> Your password is : {credentials.password}</Text>
+                    <Text> !You're now conneted! </Text>
+                    <Text> Welcome {credentials.email}</Text>
                 </View>)
                 :
                 (<View>
@@ -26,7 +25,7 @@ const Home = ({route}) => {
                     <Text>{infos.username}</Text>
                     <Text>{infos.password}</Text>
                 </View>)
-            } */}
+            }
         </View>
     )
 }

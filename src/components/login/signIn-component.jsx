@@ -1,16 +1,17 @@
 import { View, Text, Button, TextInput } from "react-native"
 import { useState } from "react"
 import globalStyle from "../../styles/global.style"
+import { LoginService } from "../../services/login-service"
 
 const SignIn = ({onCred}) => {
 
     const [ credentials, setCredentials] = useState({
-        username: "",
+        email: "",
         password: ""
     })
 
     const handleUserChange = (text) => {
-        setCredentials({...credentials, username: text})
+        setCredentials({...credentials, email: text})
         // console.log(text)
         // console.log(credentials)
     }
@@ -21,7 +22,10 @@ const SignIn = ({onCred}) => {
     }
 
     const handleSubmit = () => {
-        onCred(credentials)
+        if(credentials) {
+            LoginService({credentials})
+            onCred({credentials})
+        }
     }
 
     return (
@@ -29,9 +33,9 @@ const SignIn = ({onCred}) => {
             <Text style={globalStyle.subTitle}>SignIn</Text>
             <View>
                 <TextInput
-                    placeholder="Username"
+                    placeholder="Email"
                     inputMode="text"
-                    value={credentials.username}
+                    value={credentials.email}
                     onChangeText={handleUserChange} />
                 <TextInput
                     placeholder="Password"
@@ -42,7 +46,7 @@ const SignIn = ({onCred}) => {
                 <Button
                     title="submit"
                     onPress={handleSubmit} />
-                {/* <Text> {credentials.username} {credentials.password} </Text> */}
+                {/* <Text> {credentials.email} {credentials.password} </Text> */}
             </View>
         </View>
     )

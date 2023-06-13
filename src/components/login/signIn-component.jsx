@@ -21,11 +21,13 @@ const SignIn = ({onCred}) => {
         // console.log(credentials)
     }
 
-    const handleSubmit = () => {
-        if(credentials) {
-            LoginService({credentials})
-            onCred({credentials})
+    const handleSubmit = async () => {
+       const login = await LoginService({credentials})
+        if(login) {
+            onCred({login})
+            // console.log(login)
         }
+
     }
 
     return (

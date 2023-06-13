@@ -12,7 +12,7 @@ const Login = ({navigation}) => {
             </Text>
 
             <View>
-                <SignIn onCred={(credentials) => navigation.navigate("Home", {credentials})}/>
+                <SignIn onCred={(login) => navigation.navigate("Home", {login})}/>
             </View>
 
             <View>

@@ -51,9 +51,9 @@
          * form-component.jsx
    - services/
       * register-service.js
+      * login-service.js
    - styles/
       * global.style.js
-   - utilities
 ## Installation des dépendances :
    - npm install @react-navigation/native
    - npm install @react-navigation/stack

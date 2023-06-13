@@ -3,6 +3,7 @@ import globalStyle from "../../styles/global.style";
 import { useState } from "react";
 import { RegisteringService } from "../../services/register-service";
 
+
 const Form = ({onNav}) => {
 
     const [ infos, setInfos ] = useState({
@@ -20,10 +21,12 @@ const Form = ({onNav}) => {
         // console.log(infos)
     }
 
-    const handleSubmit = () => {
+    const handleSubmit = async () => {
         // console.log(infos)
-        RegisteringService({infos})
+       const register = await RegisteringService({infos})
+       if (register) {
         onNav()
+       }
     }
 
     return (

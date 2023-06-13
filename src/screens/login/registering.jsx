@@ -1,9 +1,8 @@
 import { Text, View } from "react-native";
 import globalStyle from "../../styles/global.style";
 import Form from "../../components/registering/form-component";
-import RegisteringService from "../../services/register-service";
 
-const Registering = () => {
+const Registering = ({navigation}) => {
 
     return (
         <View style={globalStyle.screen}>
@@ -12,7 +11,7 @@ const Registering = () => {
             Formular :`}
             </Text>
 
-            <Form onSend={(infos) => RegisteringService({infos})} />
+            <Form onNav={() => navigation.navigate("Login")}/>
 
         </View>
     )

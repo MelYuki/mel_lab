@@ -1,10 +1,9 @@
 import { View, TextInput, Button } from "react-native";
 import globalStyle from "../../styles/global.style";
 import { useState } from "react";
-// import PhoneInput from "react-native-phone-input"
 import { RegisteringService } from "../../services/register-service";
 
-const Form = ({onSend}) => {
+const Form = ({onNav}) => {
 
     const [ infos, setInfos ] = useState({
         email: "",
@@ -22,7 +21,9 @@ const Form = ({onSend}) => {
     }
 
     const handleSubmit = () => {
+        // console.log(infos)
         RegisteringService({infos})
+        onNav()
     }
 
     return (

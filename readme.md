@@ -50,7 +50,7 @@
       * registering/
          * form-component.jsx
    - services/
-      * register-service.jsx
+      * register-service.js
    - styles/
       * global.style.js
    - utilities

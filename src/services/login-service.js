@@ -6,7 +6,7 @@ export const LoginService = async ({ credentials }) => {
         .post(`http://10.0.2.2:8005/login`, credentials)
         .then((res) => {
             if(res.status === 200) {
-                console.log("You're logIn")
+                // console.log("ALLOWED")
                 return res.data
             }
         })

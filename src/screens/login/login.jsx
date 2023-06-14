@@ -3,7 +3,7 @@ import globalStyle from '../../styles/global.style';
 import SignIn from '../../components/login/signIn-component';
 import SignUp from '../../components/login/signUp-component';
 
-const Login = ({navigation}) => {
+const Login = ({navigation}, name) => {
 
     return (
         <View style={globalStyle.screen}>
@@ -12,7 +12,11 @@ const Login = ({navigation}) => {
             </Text>
 
             <View>
-                <SignIn onCred={(login) => navigation.navigate("Home", {login})}/>
+                { name ? (
+                    <SignIn onLog={(name) => navigation.navigate("Home", {name})}/>
+                ) : (
+                    <SignIn onLog={(login) => navigation.navigate("Login", {login})}/>
+                )}
             </View>
 
             <View>

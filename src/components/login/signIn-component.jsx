@@ -3,7 +3,7 @@ import { useState } from "react"
 import globalStyle from "../../styles/global.style"
 import { LoginService } from "../../services/login-service"
 
-const SignIn = ({onCred}) => {
+const SignIn = ({onLog}) => {
 
     const [ credentials, setCredentials] = useState({
         email: "",
@@ -22,12 +22,20 @@ const SignIn = ({onCred}) => {
     }
 
     const handleSubmit = async () => {
-       const login = await LoginService({credentials})
-        if(login) {
-            onCred({login})
+        const login = await LoginService({credentials})
+        // console.log(login)
+        // console.log(login.user)
+        // console.log(login.user.username)
+        const name = login.user.username
+        console.log(name)
+
+        if(name) {
+            onLog(name)
             // console.log(login)
         }
-
+        else {
+            onLog({login})
+        }
     }
 
     return (

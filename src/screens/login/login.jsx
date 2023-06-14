@@ -4,6 +4,7 @@ import SignIn from '../../components/login/signIn-component';
 import SignUp from '../../components/login/signUp-component';
 
 const Login = ({navigation}, name) => {
+    // console.log(name)
 
     return (
         <View style={globalStyle.screen}>
@@ -13,7 +14,7 @@ const Login = ({navigation}, name) => {
 
             <View>
                 { name ? (
-                    <SignIn onLog={(name) => navigation.navigate("Home", {name})}/>
+                    <SignIn onLog={(name) => navigation.navigate("Home", name)}/>
                 ) : (
                     <SignIn onLog={(login) => navigation.navigate("Login", {login})}/>
                 )}

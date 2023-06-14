@@ -23,17 +23,20 @@ const SignIn = ({onLog}) => {
 
     const handleSubmit = async () => {
         const login = await LoginService({credentials})
-        // console.log(login)
+        console.log(login)
         // console.log(login.user)
         // console.log(login.user.username)
-        const name = login.user.username
-        console.log(name)
-
-        if(name) {
-            onLog(name)
-            // console.log(login)
+        if(login != "") {
+            const name =  login.length != 0 ? login.user.username : null
+            // console.log(name)
+    
+            if(name != null) { // => OK
+                console.log(name)
+                onLog({name})
+            }
         }
         else {
+            console.log(login)
             onLog({login})
         }
     }

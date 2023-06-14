@@ -5,7 +5,7 @@ const Home = ({route}) => {
 
     const { name } = route.params
     // console.log(login) => return new objet with objet user inside
-    console.log(name)
+    // console.log(name)
 
     return (
         <View style={globalStyle.screen}>

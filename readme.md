@@ -44,12 +44,17 @@
          * events-add.jsx
          * events-shared.jsx
    - components/
+      * events-add/
+         * add-component.jsx
+      * events-list/
+         * list-component.jsx
       * login/
          * signIn-component.jsx
          * signUp-component.jsx
       * registering/
          * form-component.jsx
    - services/
+      * events-service.js
       * register-service.js
       * login-service.js
    - styles/

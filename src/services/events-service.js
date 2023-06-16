@@ -15,3 +15,19 @@ export const EventsServiceList = async () => {
         })
         return request
 }
+
+export const EventsServiceAdd = async ({infos}) => {
+
+    const request = await axios
+        .post(`http://10.0.2.2:8005/add`, infos)
+        .then((res) => {
+            if(res.status === 200) {
+                console.log("ADD")
+                return true
+            }
+        })
+        .catch((error) => {
+            console.log(error)
+        })
+        return request
+}

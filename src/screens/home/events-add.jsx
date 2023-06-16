@@ -1,7 +1,8 @@
 import { Text, View } from "react-native";
 import globalStyle from "../../styles/global.style";
+import EventsAdd from "../../components/events-add/add-component";
 
-const Add = () => {
+const Add = ({navigation}) => {
 
     return (
         <View style={globalStyle.screen}>
@@ -9,6 +10,10 @@ const Add = () => {
                 {`Gest-Events:
                 Add`}
             </Text>
+
+            <View>
+                <EventsAdd onSend={(infos) => navigation.navigate("List", {infos})}/>
+            </View>
         </View>
     )
 }

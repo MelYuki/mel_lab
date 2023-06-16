@@ -23,7 +23,7 @@ const SignIn = ({onLog}) => {
 
     const handleSubmit = async () => {
         const login = await LoginService({credentials})
-        console.log(login)
+        // console.log(login)
         // console.log(login.user)
         // console.log(login.user.username)
         if(login != "") {
@@ -31,7 +31,7 @@ const SignIn = ({onLog}) => {
             // console.log(name)
     
             if(name != null) { // => OK
-                console.log(name)
+                // console.log(name)
                 onLog({name})
             }
         }

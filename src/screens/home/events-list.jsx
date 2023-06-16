@@ -1,5 +1,6 @@
 import { Text, View } from "react-native";
 import globalStyle from "../../styles/global.style";
+import EventsList from "../../components/events-list/list-component";
 
 const List = () => {
 
@@ -9,6 +10,10 @@ const List = () => {
                 {`Gest-Events:
                 List`}
             </Text>
+
+            <View>
+                <EventsList/>
+            </View>
         </View>
     )
 }

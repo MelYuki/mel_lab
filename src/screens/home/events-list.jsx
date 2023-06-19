@@ -10,10 +10,7 @@ const List = () => {
                 {`Gest-Events:
                 List`}
             </Text>
-
-            <View>
-                <EventsList/>
-            </View>
+            <EventsList/>
         </View>
     )
 }

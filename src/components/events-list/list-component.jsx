@@ -4,42 +4,53 @@ import { useEffect, useState } from "react";
 
 const EventsList = () => {
 
-    const [ event, setEvent ] = useState([])
+    const [event, setEvent] = useState([])
 
     useEffect(() => {
-        EventsServiceList()
+
+        const fetch = async () => {
+            const getEvents = await EventsServiceList();
+            setEvent(getEvents);
+        }
+        fetch()
     }, [])
 
-    // const datas = {
-    //     name: content.event_name,
-    //     day: content.date_in
+    // if (event.length > 0) {
+    //     console.log(event.map((item) => item.date_in))
     // }
 
-    // const Item = ({name}) => (
-    //     <View style={styles.item}>
-    //         <Text style={styles.title}>{name}</Text>
-    //     </View>
-    // )
+    const data = event.map(item => ({
+        name: item.event_name,
+        date: item.date_in,
+        id: item.id
+    }))
+    //console.log(data)
 
-    // const KeyExtractor = (item) => item.id + item
+    // Faire un onPress qui amène aux détails!
+    const Item = ({ name, date }) => (
+        <View style={styles.item}>
+            <Text style={styles.title}> {name} - {date} </Text>
+        </View>
+    )
+
+    const KeyExtractor = (item) => item.id
+
 
     return (
         <View style={styles.container}>
-            <View>
-                <Text>TEST</Text>
-                {/* <FlatList
-                data={datas}
-                renderItem={({item}) => <Item title={item.name}/>}
+            <FlatList
+                data={data}
+                renderItem={({ item }) => <Item name={item.name} date={item.date} />}
                 KeyExtractor={KeyExtractor}
-                /> */}
-            </View>
+            />
         </View>
     )
 }
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1
+        flex: 1,
+        alignItems: "center"
     },
     title: {
         fontSize: 20,
@@ -49,7 +60,9 @@ const styles = StyleSheet.create({
     item: {
         padding: 20,
         marginVertical: 8,
-        marginHorizontal: 16
+        marginHorizontal: 16,
+        borderRadius: 50,
+        backgroundColor: "lightblue"
     }
 })
 

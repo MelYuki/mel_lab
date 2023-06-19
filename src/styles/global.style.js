@@ -1,6 +1,9 @@
 import { StyleSheet } from 'react-native'
 
 const globalStyle = StyleSheet.create({
+  statusBar: {
+    backgroundColor: 'lightblue',
+  },
   title : {
     fontSize: 42,
     color: 'navy',

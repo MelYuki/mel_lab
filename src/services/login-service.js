@@ -1,4 +1,5 @@
 import axios from "axios"
+import { Alert } from "react-native"
 
 export const LoginService = async ({ credentials }) => {
 
@@ -6,7 +7,7 @@ export const LoginService = async ({ credentials }) => {
         .post(`http://10.0.2.2:8005/login`, credentials)
         .then((res) => {
             if(res.status === 200) {
-                // console.log("ALLOWED (service)")
+                Alert.alert(`Welcome in ${res.data}`)
                 return res.data
             }
         })

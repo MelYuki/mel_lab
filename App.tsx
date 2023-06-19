@@ -12,11 +12,20 @@ function App(): JSX.Element {
 
     return (
       <NavigationContainer>
-        <Stack.Navigator initialRouteName='Login'>
-          <Stack.Screen name='Login' component={Login}/>
-          <Stack.Screen name='Registering' component={Registering}/>
-          <Stack.Screen name='Home' component={Home}/>
-        </Stack.Navigator>
+          <Stack.Navigator initialRouteName='Login'>
+            <Stack.Screen name='Login' component={Login}
+              options={
+                { headerShown: false }
+            }/>
+            <Stack.Screen name='Registering' component={Registering}
+              options={{
+                title: "Login Page"
+              }}/>
+            <Stack.Screen name='Home' component={Home}
+              options={{
+                headerShown: false
+              }}/>
+          </Stack.Navigator>
       </NavigationContainer>
     )
 }

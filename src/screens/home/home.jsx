@@ -1,4 +1,4 @@
-import { Text, View, SafeAreaView, StatusBar } from "react-native";
+import { SafeAreaView, StatusBar } from "react-native";
 import globalStyle from "../../styles/global.style";
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import { createStackNavigator } from "@react-navigation/stack"
@@ -9,9 +9,9 @@ import Details from "./events-details";
 import { useCallback } from "react";
 
 
-const Home = ({route}) => {
+const Home = () => {
 
-    const { name } = route.params
+    // const { name } = route.params
     // console.log(login) => return new objet with objet user inside
     // console.log(name)
 
@@ -28,7 +28,7 @@ const Home = ({route}) => {
 
     return (
         <SafeAreaView style={{ flex: 1 }}>
-            <StatusBar/>
+            <StatusBar backgroundColor={globalStyle.statusBar.backgroundColor}/>
                 <Stack.Navigator initialRouteName='menu'>
                     <Stack.Screen
                         name='menu'
@@ -38,7 +38,10 @@ const Home = ({route}) => {
                         } />
                     <Stack.Screen
                         name='Details'
-                        component={Details} />
+                        component={Details}
+                        options={
+                            { title: "The List" }
+                        } />
                 </Stack.Navigator>
         </SafeAreaView>
     )

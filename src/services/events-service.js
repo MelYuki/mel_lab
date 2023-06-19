@@ -1,4 +1,5 @@
 import axios from "axios"
+import { Alert } from "react-native"
 
 export const EventsServiceDetails = async ({id}) => {
 
@@ -38,7 +39,7 @@ export const EventsServiceAdd = async ({infos}) => {
         .post(`http://10.0.2.2:8005/add`, infos)
         .then((res) => {
             if(res.status === 200) {
-                console.log("ADD")
+                Alert.alert("New Event Added")
                 return true
             }
         })

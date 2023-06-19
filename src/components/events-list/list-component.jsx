@@ -1,8 +1,9 @@
-import { FlatList, StyleSheet, Text, View } from "react-native";
+import { FlatList, Text, View } from "react-native";
 import { EventsServiceList } from "../../services/events-service";
 import { useEffect, useState } from "react";
+import globalStyle from "../../styles/global.style";
 
-const EventsList = () => {
+const EventsList = ({onDetails}) => {
 
     const [event, setEvent] = useState([])
 
@@ -26,45 +27,37 @@ const EventsList = () => {
     }))
     //console.log(data)
 
+    const handleDetails = ({id}) => {
+        // const id = data.id
+        // console.log(data);
+        // console.log(item.id); 
+            // => Là j'ai compris qu'il fallait utiliser l'id dans Item
+        // console.log(id);
+        onDetails(id)
+    }
+
     // Faire un onPress qui amène aux détails!
-    const Item = ({ name, date }) => (
-        <View style={styles.item}>
-            <Text style={styles.title}> {name} - {date} </Text>
+    const Item = ({ name, date, id}) => (
+        <View style={globalStyle.item}>
+            <Text
+                style={globalStyle.listTitle}
+                onPress={() => handleDetails({id})}>
+                    {name} - {date}
+            </Text>
         </View>
     )
 
     const KeyExtractor = (item) => item.id
 
-
     return (
-        <View style={styles.container}>
+        <View style={globalStyle.container}>
             <FlatList
                 data={data}
-                renderItem={({ item }) => <Item name={item.name} date={item.date} />}
+                renderItem={({ item }) => <Item name={item.name} date={item.date} id={item.id}/>}
                 KeyExtractor={KeyExtractor}
             />
         </View>
     )
 }
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        alignItems: "center"
-    },
-    title: {
-        fontSize: 20,
-        textAlign: "center",
-        fontWeight: "bold",
-    },
-    item: {
-        padding: 20,
-        marginVertical: 8,
-        marginHorizontal: 16,
-        borderRadius: 50,
-        backgroundColor: "lightblue"
-    }
-})
-
 
 export default EventsList

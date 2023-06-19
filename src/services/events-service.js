@@ -1,5 +1,20 @@
 import axios from "axios"
 
+export const EventsServiceDetails = async ({id}) => {
+
+    const request = await axios
+        .get(`http://10.0.2.2:8005/details/${id}`)
+        .then((res) => {
+            if(res.status === 200) {
+                return res.data
+            }
+        })
+        .catch((error) => {
+            console.log(error)
+        })
+        return request
+}
+
 export const EventsServiceList = async () => {
 
     const request = await axios

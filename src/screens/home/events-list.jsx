@@ -2,7 +2,7 @@ import { Text, View } from "react-native";
 import globalStyle from "../../styles/global.style";
 import EventsList from "../../components/events-list/list-component";
 
-const List = () => {
+const List = ({navigation}) => {
 
     return (
         <View style={globalStyle.screen}>
@@ -10,7 +10,7 @@ const List = () => {
                 {`Gest-Events:
                 List`}
             </Text>
-            <EventsList/>
+            <EventsList onDetails={(id) => navigation.navigate("Details", {id})}/>
         </View>
     )
 }

@@ -15,6 +15,7 @@ const EventsList = ({onDetails}) => {
         }
         fetch()
     }, [])
+    // console.log(event)
 
     // if (event.length > 0) {
     //     console.log(event.map((item) => item.date_in))
@@ -52,7 +53,7 @@ const EventsList = ({onDetails}) => {
     return (
         <View style={globalStyle.container}>
             <FlatList
-                data={data}
+                data={data} // Map through the array
                 renderItem={({ item }) => <Item name={item.name} date={item.date} id={item.id}/>}
                 KeyExtractor={KeyExtractor}
             />

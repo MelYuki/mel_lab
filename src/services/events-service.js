@@ -6,7 +6,8 @@ export const EventsServiceDetails = async ({id}) => {
         .get(`http://10.0.2.2:8005/details/${id}`)
         .then((res) => {
             if(res.status === 200) {
-                return res.data
+                // console.log(res.data)
+                return res.data.content
             }
         })
         .catch((error) => {
